@@ -8,6 +8,9 @@ RUN npm run build
 # Stage 2: Serve build with Tomcat
 FROM tomcat:9-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY --from=build-stage /app/build /usr/local/tomcat/webapps/ROOT
+
+# Copy Vite build output (dist) into Tomcat ROOT
+COPY --from=build-stage /app/dist /usr/local/tomcat/webapps/ROOT
+
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
