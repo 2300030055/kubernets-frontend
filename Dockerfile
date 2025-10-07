@@ -6,7 +6,7 @@
     RUN apt-get update && apt-get install -y git
     
     # Clone your frontend repo
-    RUN git clone https://github.com/2300030055/ecommerce-frontend-kubernets.git.
+    RUN git clone https://github.com/2300030055/kubernets-frontend.git .
     
     RUN npm install
     RUN npm run build
