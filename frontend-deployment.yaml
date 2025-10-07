@@ -12,11 +12,12 @@ spec:
       labels:
         app: frontend
     spec:
-      containers:
-        - name: frontend
-          image: avanigaddanavadeep/skill14-216:v1
-          ports:
-            - containerPort: 8080
+     containers:
+  - name: frontend
+    image: avanigaddanavadeep/skill14-216:v1
+    ports:
+      - containerPort: 8080
+
 ---
 apiVersion: v1
 kind: Service
